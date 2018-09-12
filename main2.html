@@ -80,115 +80,239 @@
     <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
     <meta http-equiv="pragma" content="no-cache" />
     <style>
-        .full-width, .main-slider{
+        .main-slider-wrap {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: stretch;
+            margin-bottom: 30px;
+        }
+        .main-slider-wrap .main-slider {
+            margin-bottom: 0 !important;
             padding-right: 0;
             padding-left: 0;
         }
-        .custom-form-wrap {
-            width: 100%;
-            margin: auto;
-            padding: 20px;
-            background: #0d1c34;
-        }
-        .custom-form-wrap label {
-            font-size: 18px;
-            font-weight: 700;
-            line-height: 1;
-            color: #fff
-        }
-
-        .custom-form-wrap input {
-            font-size: 10px;
-            font-weight: 400;
-            line-height: 1;
-            width: 90%;
-            margin-bottom: 10px;
-            padding: 15px 15px 15px 22px;
-            border: none;
-            border-bottom: 1px solid #fff;
-            border-radius: 2px
-        }
-        .custom-form-wrap input + span {
-            top: 50%;
-            right: 12%;
-            left: auto;
-            opacity: .3;
-            color: #000;
-            font-size: 16px;
-            line-height: 1;
-            position: absolute;
+        .home-filters {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 15px 0 18px;
+            background-color: #0d1c34;
+            position: relative;
+            top: 0px;
             z-index: 1;
-            transform: translateY(-50%);
         }
-
-        .custom-form-wrap .date-input, .main-slider-wrap .custom-form-wrap .title-row {
-            margin-bottom: 10px
+        .home-filter__title {
+            font-size: 18px;
+            font-weight: 400;
+            color: #fff;
+            margin-right: 10px;
         }
-
-        .custom-form-wrap a {
+        .home-filter__form select {
             font-size: 14px;
-            line-height: 45px;
-            text-decoration: none;
-            padding-left: 10px;
+            font-weight: 400;
+            color: #333;
+            text-align: left;
+            line-height: 25px;
+            border: none;
+            outline: none;
+            background-color: #fff;
+            padding-left: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            min-width: 300px;
+            margin-right: 10px;
         }
-        .custom-form-wrap {
-            padding: 20px 35px 20px 60px;
-            margin-bottom: 30px;
+        .home-filter__form button {
+            width: 40px;
+            height: 40px;
+            background-color: #415164;
+            position: relative;
+            top: 2px;
         }
-
-        .custom-form-wrap button {
-            width: 100%
+        .home-filter__form button:before {
+            content: "\f002";
+            font-size: 20px;
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            color: #fff;
         }
-
-        .custom-form-wrap input#datepicker {
-            background: url(http://www.206tours.com/assets/images/icon-calendar.png) 98% center no-repeat #fff;
+        .group-leaders{
+            margin: 10px;
+            color: white;
+            display: inline-block;
         }
-
-        .custom-form-wrap .date-input:before {
-            position: absolute;
-            top: 10px;
-            left: 0;
-            width: 1px;
-            height: calc(100% - 20px);
-            content: '';
-            background-color: #e6e6e6;
-        }
-        .center-label{
-            text-align: center;
-            margin-bottom: 15px;
-        }
-        @media screen and (min-width: 64em){
-
-            .custom-form-wrap input + span {
-                top: 50%;
-                right: 18%;
+        @media only screen and (max-width: 1200px) {
+            .home-filters {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                position: static;
+                margin-top: -25px;
             }
-            .custom-form-wrap input#datepicker {
-                background: url(http://www.206tours.com/assets/images/icon-calendar.png) 92% center no-repeat #fff;
+            .home-filter__form select {
+                margin-right: 0;
+                margin-bottom: 10px;
+                min-width: 400px;
+                width: 100%;
             }
-            .custom-form-wrap .date-input {
-                position: relative;
-                margin-bottom: 0;
-                margin-left: -2px
+            .home-filter__title {
+                margin-right: 0;
+                margin-bottom: 10px;
             }
-            .custom-form-wrap input {
-                margin-bottom: 0;
-                border: none;
-                background: #fff
+            .home-filter__form {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
             }
-            .center-label{
-                text-align: left;
-                margin-bottom: 0;
+            .home-filter__form button {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                min-width: 400px;
+                width: 100%;
+            }
+            .home-filter__form button:after {
+                content: "SEARCH";
+                font-size: 16px;
+                color: #fff;
+                margin-left: 10px;
+            }
+            .group-leaders{
+                margin-top: 20px;
             }
         }
-        @media screen and (min-width: 48em){
-            .custom-form-wrap button {
-                padding: 15px 30px;
-                width:auto;
+        .group-leaders:hover{
+            color: white;
+        }
+        .group-leaders:active{
+            color: white;
+        }
+        @media only screen and (max-width: 420px) {
+            .home-filter__form select {
+                min-width: 250px;
+                width: 100%;
+            }
+            .home-filter__form button {
+                min-width: 250px;
+                width: 100%;
             }
         }
-
     </style>
+    <!--<style>-->
+        <!--.full-width, .main-slider{-->
+            <!--padding-right: 0;-->
+            <!--padding-left: 0;-->
+        <!--}-->
+        <!--.custom-form-wrap {-->
+            <!--width: 100%;-->
+            <!--margin: auto;-->
+            <!--padding: 20px;-->
+            <!--background: #0d1c34;-->
+        <!--}-->
+        <!--.custom-form-wrap label {-->
+            <!--font-size: 18px;-->
+            <!--font-weight: 700;-->
+            <!--line-height: 1;-->
+            <!--color: #fff-->
+        <!--}-->
+
+        <!--.custom-form-wrap input {-->
+            <!--font-size: 10px;-->
+            <!--font-weight: 400;-->
+            <!--line-height: 1;-->
+            <!--width: 90%;-->
+            <!--margin-bottom: 10px;-->
+            <!--padding: 15px 15px 15px 22px;-->
+            <!--border: none;-->
+            <!--border-bottom: 1px solid #fff;-->
+            <!--border-radius: 2px-->
+        <!--}-->
+        <!--.custom-form-wrap input + span {-->
+            <!--top: 50%;-->
+            <!--right: 12%;-->
+            <!--left: auto;-->
+            <!--opacity: .3;-->
+            <!--color: #000;-->
+            <!--font-size: 16px;-->
+            <!--line-height: 1;-->
+            <!--position: absolute;-->
+            <!--z-index: 1;-->
+            <!--transform: translateY(-50%);-->
+        <!--}-->
+
+        <!--.custom-form-wrap .date-input, .main-slider-wrap .custom-form-wrap .title-row {-->
+            <!--margin-bottom: 10px-->
+        <!--}-->
+
+        <!--.custom-form-wrap a {-->
+            <!--font-size: 14px;-->
+            <!--line-height: 45px;-->
+            <!--text-decoration: none;-->
+            <!--padding-left: 10px;-->
+        <!--}-->
+        <!--.custom-form-wrap {-->
+            <!--padding: 20px 35px 20px 60px;-->
+            <!--margin-bottom: 30px;-->
+        <!--}-->
+
+        <!--.custom-form-wrap button {-->
+            <!--width: 100%-->
+        <!--}-->
+
+        <!--.custom-form-wrap input#datepicker {-->
+            <!--background: url(http://www.206tours.com/assets/images/icon-calendar.png) 98% center no-repeat #fff;-->
+        <!--}-->
+
+        <!--.custom-form-wrap .date-input:before {-->
+            <!--position: absolute;-->
+            <!--top: 10px;-->
+            <!--left: 0;-->
+            <!--width: 1px;-->
+            <!--height: calc(100% - 20px);-->
+            <!--content: '';-->
+            <!--background-color: #e6e6e6;-->
+        <!--}-->
+        <!--.center-label{-->
+            <!--text-align: center;-->
+            <!--margin-bottom: 15px;-->
+        <!--}-->
+        <!--@media screen and (min-width: 64em){-->
+
+            <!--.custom-form-wrap input + span {-->
+                <!--top: 50%;-->
+                <!--right: 18%;-->
+            <!--}-->
+            <!--.custom-form-wrap input#datepicker {-->
+                <!--background: url(http://www.206tours.com/assets/images/icon-calendar.png) 92% center no-repeat #fff;-->
+            <!--}-->
+            <!--.custom-form-wrap .date-input {-->
+                <!--position: relative;-->
+                <!--margin-bottom: 0;-->
+                <!--margin-left: -2px-->
+            <!--}-->
+            <!--.custom-form-wrap input {-->
+                <!--margin-bottom: 0;-->
+                <!--border: none;-->
+                <!--background: #fff-->
+            <!--}-->
+            <!--.center-label{-->
+                <!--text-align: left;-->
+                <!--margin-bottom: 0;-->
+            <!--}-->
+        <!--}-->
+        <!--@media screen and (min-width: 48em){-->
+            <!--.custom-form-wrap button {-->
+                <!--padding: 15px 30px;-->
+                <!--width:auto;-->
+            <!--}-->
+        <!--}-->
+
+    <!--</style>-->
 </head>
 <body>
 <div class="wrapper">
@@ -1025,30 +1149,52 @@
                 </div>
             </a>
         </div>
-        <div class="custom-form-wrap slider-form custom-form">
-            <form method="post" action="search.html">
-                <input type=hidden name="flexible-dates" value="on">
-                <input name="action" value="search" type="hidden">
-                <div class="row align-middle">
-                    <div class="small-12 large-2 columns nopadding">
-                        <div class="center-label">
-                            <label for="search" style="font-size: 16px;">Search Pilgrimages</label>
-                        </div>
-                    </div>
-                    <div class="small-12 large-4 columns nopadding input-wrap">
-                        <input type=hidden name=keywordsselectedmain id="keywordsselectedmain">
-                        <input type="text" name="keywords" id="search" placeholder="Where or Key word"><span class="icon-globe"></span>
-                    </div>
-                    <div class="small-12 large-2 columns nopadding date-input input-wrap">
-                        <input type="text" name="depPicker" placeholder="When" id="datepicker">
-                    </div>
-                    <div class="small-6 large-2 columns button-col">
-                        <button type="submit" class="theme-btn orange">Search</button>
-                    </div>
-                    <div class="small-6 large-2 columns nopadding"><a href="mailto:groups@206tours.com" class="link" style="color: #ffffff;">Group Leaders</a></div>
-                </div>
+        <div class="home-filters">
+            <span class="home-filter__title">SEARCH PILGRIMAGES</span>
+            <form action="" class="home-filter__form">
+                <select name="region" id="region">
+                    <option value="">REGION</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+                <select name="departure-date" id="dep-date" disabled>
+                    <option value="">DEPARTURE DATE</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+                <select name="duration" id="duration" disabled>
+                    <option value="">DURATION</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+                <button></button>
+                <span><a class="group-leaders" href="mailto:groups@206tours.com">Group Leaders</a></span>
             </form>
         </div>
+        <!--<div class="custom-form-wrap slider-form custom-form">-->
+            <!--<form method="post" action="search.html">-->
+                <!--<input type=hidden name="flexible-dates" value="on">-->
+                <!--<input name="action" value="search" type="hidden">-->
+                <!--<div class="row align-middle">-->
+                    <!--<div class="small-12 large-2 columns nopadding">-->
+                        <!--<div class="center-label">-->
+                            <!--<label for="search" style="font-size: 16px;">Search Pilgrimages</label>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="small-12 large-4 columns nopadding input-wrap">-->
+                        <!--<input type=hidden name=keywordsselectedmain id="keywordsselectedmain">-->
+                        <!--<input type="text" name="keywords" id="search" placeholder="Where or Key word"><span class="icon-globe"></span>-->
+                    <!--</div>-->
+                    <!--<div class="small-12 large-2 columns nopadding date-input input-wrap">-->
+                        <!--<input type="text" name="depPicker" placeholder="When" id="datepicker">-->
+                    <!--</div>-->
+                    <!--<div class="small-6 large-2 columns button-col">-->
+                        <!--<button type="submit" class="theme-btn orange">Search</button>-->
+                    <!--</div>-->
+                    <!--<div class="small-6 large-2 columns nopadding"><a href="mailto:groups@206tours.com" class="link" style="color: #ffffff;">Group Leaders</a></div>-->
+                <!--</div>-->
+            <!--</form>-->
+        <!--</div>-->
     </div>
     <div class="row">
         <!--<p style="font-size: 22px; text-align: center; color: #ff0000;"><strong>OUR SERVER IS BEING UPDATED. WE APOLOGIZE FOR THE INCONVENIENCE. IF YOU NEED ADDITIONAL ASSISTANCE, PLEASE CONTACT US AT <a href="mailto:sales@206tours.com" class="link" style="font-size: 26px; text-align: center; color: #0000ff;">SALES@206TOURS.COM</a> OR CALL 631-361-4644.</strong></p>-->
