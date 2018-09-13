@@ -143,7 +143,13 @@
             color: white;
             display: inline-block;
         }
+        .main-slider .main-slider_item{
+            background-size: cover;
+        }
         @media only screen and (max-width: 1240px) {
+            .main-slider .main-slider_item{
+                background-size: cover;
+            }
             .home-filters {
                 display: flex;
                 flex-direction: column;
@@ -193,6 +199,9 @@
             color: white;
         }
         @media only screen and (max-width: 420px) {
+            .main-slider .main-slider_item{
+                background-size: cover;
+            }
             .home-filter__form select {
                 min-width: 250px;
                 width: 100%;
@@ -207,7 +216,7 @@
                 padding-top: 33.39%;
                 background-repeat: no-repeat;
                 background-position: center center;
-                background-size: contain;
+                background-size: cover;
                 height: 0;
             }
         }
