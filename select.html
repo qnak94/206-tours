@@ -45,9 +45,12 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
     <style>
+<<<<<<< HEAD
         .select2-selection{
             background: url("search.svg") no-repeat calc(100% - 5px);
         }
+=======
+>>>>>>> origin/master
         .pilgrimages-list-wrapper {padding: 5px}
         .pilgrimages-list > thead > tr > th {
             text-align: left;
@@ -511,7 +514,11 @@
             <div class="row align-center">
                 <div class="small-12 medium-10 large-8 columns pilgrimages-list-wrapper">
                     <div>
+<<<<<<< HEAD
                             <select onchange="myFunction()" multiple id="e1" style="width: 100%;" >
+=======
+                            <select onchange="myFunction()" title="Choose country" multiple id="e1" style="width: 100%;">
+>>>>>>> origin/master
                                 <option>Bosnia-Herzegovina</option>
                                 <option>France</option>
                                 <option>Italy</option>
@@ -2182,8 +2189,12 @@
         </div>
     </main>
     <script>
+<<<<<<< HEAD
         $("#e1").select2({placeholder: "search by destination"});
 
+=======
+        $("#e1").select2();
+>>>>>>> origin/master
     </script>
     <script>
         function myFunction() {
@@ -2197,7 +2208,13 @@
                 }
                 for(k = 0; k < document.getElementsByClassName("select2-selection__choice").length; k++){
                     input = document.getElementsByClassName("select2-selection__choice")[k].title;
+<<<<<<< HEAD
                     filter = input.toUpperCase();
+=======
+                    console.log(input);
+                    filter = input.toUpperCase();
+                    console.log(filter);
+>>>>>>> origin/master
                     table = document.getElementById("table");
                     tr = table.getElementsByTagName("tr");
 
@@ -2206,17 +2223,25 @@
                         td = tr[i].getElementsByTagName("td")[2];
                         if (td) {
                             if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+<<<<<<< HEAD
                                 tr[i].style.display = "table-row";
+=======
+                                tr[i].style.display = "";
+>>>>>>> origin/master
                             }
                         }
                     }
                 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
             }
             else {
                 table = document.getElementById("table");
                 tr = table.getElementsByTagName("tr");
                 for (i = 0; i < tr.length; i++){
+<<<<<<< HEAD
                     tr[i].style.display = "table-row";
                 }
             }
@@ -2244,6 +2269,12 @@
 
                 }
             }
+=======
+                    tr[i].style.display = "";
+                }
+            }
+
+>>>>>>> origin/master
         }
     </script>
     <!--footer-->
