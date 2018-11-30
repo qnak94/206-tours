@@ -14,8 +14,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
     <meta http-equiv="Content-Language" content="en">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <link rel="stylesheet" href="https://www.206tours.com/assets/css/global_new_top_nav.css">
     <link rel="stylesheet" href="https://www.206tours.com/assets/css/206global.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
     <script type="text/javascript">
         WebFontConfig = {
             google: { families: ['Droid+Serif:400,400italic', 'Montserrat:400,700'] }
@@ -33,6 +36,10 @@
             page: 'organize_page'
         };
     </script>    <style>
+    .select2-selection{
+        /*background: url("search.svg") no-repeat calc(100% - 5px);*/
+        margin-bottom: 15px;
+    }
 
     #main {flex-grow: 0 !important;}
     .section-title h3 {text-transform: capitalize}
@@ -483,201 +490,35 @@
     </div>
     <div class="row align-center content-info">
         <div class="small-12 large-8 columns table-scroll">
-            <table cellpadding="3" cellspacing="3">
+            <div>
+                <select onchange="myFunction()" multiple="" id="e1" style="width: 100%;" data-select2-id="e1" tabindex="-1" class="select2-hidden-accessible" aria-hidden="true">
+                    <option>Austria</option>
+                    <option>Belgium</option>
+                    <option>Bosnia-Herzegovina</option>
+                    <option>England</option>
+                    <option>France</option>
+                    <option>Germany</option>
+                    <option>Ireland</option>
+                    <option>Italy</option>
+                    <option>Mexico</option>
+                    <option>Poland</option>
+                    <option>Portugal</option>
+                    <option>Spain</option>
+                    <option>Switzerland</option>
+                </select>
+
+            </div>
+            <table cellpadding="3" cellspacing="3" id="shrineTable">
                 <thead>
                 <tr>
                     <th>Shrine</th>
                     <th>Location</th>
                 </tr>
                 </thead>
-                <tbody><tr class="">
-                    <td><a href="details.html#10">Abbeys of St. Peter and St. Cecilia</a></td>
-                    <td><a href="details.html#acc-4-label">England</a></td>
-                </tr>
-                <tr class="">
-                    <td><a href="details.html#39">Bari and Apulia</a></td>
-                    <td><a href="details.html#">Italy</a></td>
-                </tr>
-                <tr class="">
-                    <td><a href="details.html#40">Basilica of St. John Lateran</a></td>
-                    <td><a href="details.html#"></a>Italy</td>
-                </tr>
-                <tr class="">
-                    <td><a href="details.html#41">Basilica of St. Lawrence Outside the Walls</a></td>
-                    <td><a href="details.html#">Italy</a></td>
-                </tr>
-                <tr class="">
-                    <td><a href="details.html#42">Basilica of St. Mary Major</a></td>
-                    <td><a href="details.html#">Italy</a></td>
-                </tr>
-                <tr class="">
-                    <td><a href="details.html#"></a></td>
-                    <td><a href="details.html#"></a></td>
-                </tr>
-                <tr class="">
-                    <td><a href="details.html#"></a></td>
-                    <td><a href="details.html#"></a></td>
-                </tr>
-                <tr class="">
-                    <td><a href="details.html#"></a></td>
-                    <td><a href="details.html#"></a></td>
-                </tr>
-                <tr class="">
-                    <td><a href="details.html#"></a></td>
-                    <td><a href="details.html#"></a></td>
-                </tr>
-                <tr class="">
-                    <td><a href="details.html#"></a></td>
-                    <td><a href="details.html#"></a></td>
-                </tr>
-                <tr class="">
-                    <td><a href="details.html#"></a></td>
-                    <td><a href="details.html#"></a></td>
-                </tr>
-                <tr class="">
-                    <td><a href="details.html#"></a></td>
-                    <td><a href="details.html#"></a></td>
-                </tr>
-                <tr class="">
-                    <td><a href="details.html#"></a></td>
-                    <td><a href="details.html#"></a></td>
-                </tr>
-                <tr class="">
-                    <td><a href="details.html#"></a></td>
-                    <td><a href="details.html#"></a></td>
-                </tr>
-                <tr class="">
-                    <td><a href="details.html#"></a></td>
-                    <td><a href="details.html#"></a></td>
-                </tr>
-                <tr class="">
-                    <td><a href="details.html#"></a></td>
-                    <td><a href="details.html#"></a></td>
-                </tr>
-                <tr class="">
-                    <td><a href="details.html#"></a></td>
-                    <td><a href="details.html#"></a></td>
-                </tr>
-                <tr class="">
-                    <td><a href="details.html#"></a></td>
-                    <td><a href="details.html#"></a></td>
-                </tr>
-                <tr class="">
-                    <td><a href="details.html#"></a></td>
-                    <td><a href="details.html#"></a></td>
-                </tr>
-                <tr class="">
-                    <td><a href="details.html#"></a></td>
-                    <td><a href="details.html#"></a></td>
-                </tr>
-                <tr class="">
-                    <td><a href="details.html#"></a></td>
-                    <td><a href="details.html#"></a></td>
-                </tr>
-                <tr class="">
-                    <td><a href="details.html#"></a></td>
-                    <td><a href="details.html#"></a></td>
-                </tr>
-                <tr class="">
-                    <td><a href="details.html#"></a></td>
-                    <td><a href="details.html#"></a></td>
-                </tr>
-                <tr class="">
-                    <td><a href="details.html#"></a></td>
-                    <td><a href="details.html#"></a></td>
-                </tr>
-                <tr class="">
-                    <td><a href="details.html#"></a></td>
-                    <td><a href="details.html#"></a></td>
-                </tr>
-                <tr class="">
-                    <td><a href="details.html#"></a></td>
-                    <td><a href="details.html#"></a></td>
-                </tr>
-                <tr class="">
-                    <td><a href="details.html#"></a></td>
-                    <td><a href="details.html#"></a></td>
-                </tr>
-                <tr class="">
-                    <td><a href="details.html#"></a></td>
-                    <td><a href="details.html#"></a></td>
-                </tr>
-                <tr class="">
-                    <td><a href="details.html#"></a></td>
-                    <td><a href="details.html#"></a></td>
-                </tr>
-                <tr class="">
-                    <td><a href="details.html#"></a></td>
-                    <td><a href="details.html#"></a></td>
-                </tr>
-                <tr class="">
-                    <td><a href="details.html#"></a></td>
-                    <td><a href="details.html#"></a></td>
-                </tr>
-                <tr class="">
-                    <td><a href="details.html#"></a></td>
-                    <td><a href="details.html#"></a></td>
-                </tr>
-                <tr class="">
-                    <td><a href="details.html#"></a></td>
-                    <td><a href="details.html#"></a></td>
-                </tr>
-                <tr class="">
-                    <td><a href="details.html#"></a></td>
-                    <td><a href="details.html#"></a></td>
-                </tr>
-                <tr class="">
-                    <td><a href="details.html#"></a></td>
-                    <td><a href="details.html#"></a></td>
-                </tr>
-                <tr class="">
-                    <td><a href="details.html#"></a></td>
-                    <td><a href="details.html#"></a></td>
-                </tr>
-                <tr class="">
-                    <td><a href="details.html#"></a></td>
-                    <td><a href="details.html#"></a></td>
-                </tr>
-                <tr class="">
-                    <td><a href="details.html#"></a></td>
-                    <td><a href="details.html#"></a></td>
-                </tr>
-                <tr class="">
-                    <td><a href="details.html#"></a></td>
-                    <td><a href="details.html#"></a></td>
-                </tr>
-                <tr class="">
-                    <td><a href="details.html#"></a></td>
-                    <td><a href="details.html#"></a></td>
-                </tr>
-                <tr class="">
-                    <td><a href="details.html#"></a></td>
-                    <td><a href="details.html#"></a></td>
-                </tr>
-                <tr class="">
-                    <td><a href="details.html#"></a></td>
-                    <td><a href="details.html#"></a></td>
-                </tr>
-                <tr class="">
-                    <td><a href="details.html#"></a></td>
-                    <td><a href="details.html#"></a></td>
-                </tr>
-                <tr class="">
-                    <td><a href="details.html#"></a></td>
-                    <td><a href="details.html#"></a></td>
-                </tr>
-                <tr class="">
-                    <td><a href="details.html#"></a></td>
-                    <td><a href="details.html#"></a></td>
-                </tr>
-                <tr class="">
-                    <td><a href="details.html#"></a></td>
-                    <td><a href="details.html#"></a></td>
-                </tr>
-                <tr class="">
-                    <td><a href="details.html#"></a></td>
-                    <td><a href="details.html#"></a></td>
-                </tr>
+                <tbody>
+
+
+
                 </tbody>
             </table>
         </div>
@@ -691,6 +532,518 @@
         </div>
     </div>
 </main>
+    <script>
+        var m = [{
+                shrine:'Mariazell',
+                country:'Austria',
+                link: 'details.html#1'
+            },
+            {
+                shrine:'Our Lady of Banneux',
+                country:'Belgium',
+                link: 'details.html#2'
+            },
+            {
+                shrine:'Our Lady of Beauraing',
+                country:'Belgium',
+                link: 'details.html#3'
+            },
+            {
+                shrine:'Medjugorje',
+                country:'Bosnia-Herzogovina',
+                link: 'details.html#4'
+            },
+            {
+                shrine:'Canterbury',
+                country:'England',
+                link: 'details.html#5'
+            },
+            {
+                shrine:'Glastonbury',
+                country:'England',
+                link: 'details.html#6'
+            },
+            {
+                shrine:'Our Lady of Mt. Carmel',
+                country:'England',
+                link: 'details.html#7'
+            },
+            {
+                shrine:'St. Thomas Becket',
+                country:'England',
+                link: 'details.html#8'
+            },
+            {
+                shrine:'Walsingham',
+                country:'England',
+                link: 'details.html#9'
+            },
+            {
+                shrine:'Abbeys of St. Peter & St. Cecilia Benedictine Monks of Solesmes',
+                country:'England',
+                link: 'details.html#10'
+            },
+            {
+                shrine:'Cathedral of Notre Dame',
+                country:'France',
+                link: 'details.html#11'
+            },
+            {
+                shrine:'Chartres',
+                country:'France',
+                link: 'details.html#12'
+            },
+            {
+                shrine:'La Sainte Chapelle (Holy Chapel)',
+                country:'France',
+                link: 'details.html#13'
+            },
+            {
+                shrine:'La Salette',
+                country:'France',
+                link: 'details.html#14'
+            },
+            {
+                shrine:'Lourdes',
+                country:'France',
+                link: 'details.html#15'
+            },
+            {
+                shrine:'Mont Saint Michel',
+                country:'France',
+                link: 'details.html#16'
+            },
+            {
+                shrine:'Our Lady of Le Puy',
+                country:'France',
+                link: 'details.html#17'
+            },
+            {
+                shrine:'Our Lady of Pontmain',
+                country:'France',
+                link: 'details.html#18'
+            },
+            {
+                shrine:'Our Lady of Rocamadour',
+                country:'France',
+                link: 'details.html#19'
+            },
+            {
+                shrine:'Our Lady of the Miraculous Medal and Our Lady of the Green Scapular',
+                country:'France',
+                link: 'details.html#20'
+            },
+            {
+                shrine:'Sacre Coeur Basilica',
+                country:'France',
+                link: 'details.html#21'
+            },
+            {
+                shrine:'Sacred Heart of Jesus and St. Margaret Mary Alacoque',
+                country:'France',
+                link: 'details.html#22'
+            },
+            {
+                shrine:'St Therese of Lisieux',
+                country:'France',
+                link: 'details.html#23'
+            },
+            {
+                shrine:'St. Anne Feastday: July 26',
+                country:'France',
+                link: 'details.html#24'
+            },
+            {
+                shrine:'St. Bernadette Soubirous',
+                country:'France',
+                link: 'details.html#25'
+            },
+            {
+                shrine:'St. John Vianney',
+                country:'France',
+                link: 'details.html#26'
+            },
+            {
+                shrine:'St. Louis de Montfort',
+                country:'France',
+                link: 'details.html#27'
+            },
+            {
+                shrine:'St. Mary Magdalene Feastday: July 22',
+                country:'France',
+                link: 'details.html#28'
+            },
+            {
+                shrine:'St. Vincent de Paul',
+                country:'France',
+                link: 'details.html#29'
+            },
+            {
+                shrine:'Cologne & Aachen',
+                country:'Germany',
+                link: 'details.html#30'
+            },
+            {
+                shrine:'Eucharistic Miracle of Walldurn',
+                country:'Germany',
+                link: 'details.html#31'
+            },
+            {
+                shrine:'Munich and Bavaria',
+                country:'Germany',
+                link: 'details.html#32'
+            },
+            {
+                shrine:'Oberammergau',
+                country:'Germany',
+                link: 'details.html#33'
+            },
+            {
+                shrine:'Knock',
+                country:'Ireland',
+                link: 'details.html#34'
+            },
+            {
+                shrine:'Our Lady of Knock Feastday: August 21',
+                country:'Ireland',
+                link: 'details.html#35'
+            },
+            {
+                shrine:'St. Patrick\'s Holy Mountain',
+                country:'Ireland',
+                link: 'details.html#36'
+            },
+            {
+                shrine:'St. Patrick\'s Purgatory',
+                country:'Ireland',
+                link: 'details.html#37'
+            },
+            {
+                shrine:"Rome's Basilicas and Shrines",
+                country:'Italy',
+                link: 'details.html#38'
+            },
+            {
+                shrine:'Bari and Apulia',
+                country:'Italy',
+                link: 'details.html#39'
+            },
+            {
+                shrine:'Basilica of St. John Lateran',
+                country:'Italy',
+                link: 'details.html#40'
+            },
+            {
+                shrine:'Basilica of St. Lawrence Outside the Walls',
+                country:'Italy',
+                link: 'details.html#41'
+            },
+            {
+                shrine:'Basilica of St. Mary Major',
+                country:'Italy',
+                link: 'details.html#42'
+            },
+            {
+                shrine:'Basilica of St. Mary Sopra Minerva',
+                country:'Italy',
+                link: 'details.html#43'
+            },
+            {
+                shrine:'Basilica of St. Paul Outside the Walls',
+                country:'Italy',
+                link: 'details.html#44'
+            },
+            {
+                shrine:'Basilica of St. Peter in Chains',
+                country:'Italy',
+                link: 'details.html#45'
+            },
+            {
+                shrine:'Clare and the Second Order',
+                country:'Italy',
+                link: 'details.html#46'
+            },
+            {
+                shrine:'Eucharistic Miracle of Cascia',
+                country:'Italy',
+                link: 'details.html#47'
+            },
+            {
+                shrine:'Eucharistic Miracle of Lanciano',
+                country:'Italy',
+                link: 'details.html#48'
+            },
+            {
+                shrine:'Eucharistic Miracle of Orvieto',
+                country:'Italy',
+                link: 'details.html#49'
+            },
+            {
+                shrine:'Eucharistic Miracle of Siena',
+                country:'Italy',
+                link: 'details.html#50'
+            },
+            {
+                shrine:'Holy House of Loreto',
+                country:'Italy',
+                link: 'details.html#51'
+            },
+            {
+                shrine:'Loreto',
+                country:'Italy',
+                link: 'details.html#52'
+            },
+            {
+                shrine:'Our Lady of Grace and Padre Pio\'s Friary',
+                country:'Italy',
+                link: 'details.html#53'
+            },
+            {
+                shrine:'Padua',
+                country:'Italy',
+                link: 'details.html#54'
+            },
+            {
+                shrine:'Saint Francis of Assisi',
+                country:'Italy',
+                link: 'details.html#55'
+            },
+            {
+                shrine:'San Giovanni Rotondo',
+                country:'Italy',
+                link: 'details.html#56'
+            },
+            {
+                shrine:'Sanctuary of the Holy Stairs',
+                country:'Italy',
+                link: 'details.html#57'
+            },
+            {
+                shrine:'St. Anthony of Padua',
+                country:'Italy',
+                link: 'details.html#58'
+            },
+            {
+                shrine:'St. Bernardine of Siena',
+                country:'Italy',
+                link: 'details.html#59'
+            },
+            {
+                shrine:'St. Catherine of Bologna Feastday: March 9',
+                country:'Italy',
+                link: 'details.html#60'
+            },
+            {
+                shrine:'St. Catherine of Siena',
+                country:'Italy',
+                link: 'details.html#61'
+            },
+            {
+                shrine:'St. Francis and St. Clare of Assisi Feastdays: Oct 3 & 4',
+                country:'Italy',
+                link: 'details.html#62'
+            },
+            {
+                shrine:'St. Gerard Majella',
+                country:'Italy',
+                link: 'details.html#63'
+            },
+            {
+                shrine:'St. Maria Goretti',
+                country:'Italy',
+                link: 'details.html#64'
+            },
+            {
+                shrine:'St. Michael the Archangel',
+                country:'Italy',
+                link: 'details.html#65'
+            },
+            {
+                shrine:'St. Peter\'s Basilica and the Vatican',
+                country:'Italy',
+                link: 'details.html#66'
+            },
+            {
+                shrine:'St. Rita of Cascia',
+                country:'Italy',
+                link: 'details.html#67'
+            },
+            {
+                shrine:'Turin',
+                country:'Italy',
+                link: 'details.html#68'
+            },
+            {
+                shrine:'Guadalupe',
+                country:'Mexico',
+                link: 'details.html#69'
+            },
+            {
+                shrine:'Czestochowa',
+                country:'Poland',
+                link: 'details.html#70'
+            },
+            {
+                shrine:'The Sanctuary of Our Lady of Licheń',
+                country:'Poland',
+                link: 'details.html#71'
+            },
+            {
+                shrine:'Eucharistic Miracle of Santarem',
+                country:'Portugal',
+                link: 'details.html#72'
+            },
+            {
+                shrine:'Fatima',
+                country:'Portugal',
+                link: 'details.html#73'
+            },
+            {
+                shrine:'Garabandal',
+                country:'Spain',
+                link: 'details.html#74'
+            },
+            {
+                shrine:'Our Lady of Montserrat',
+                country:'Spain',
+                link: 'details.html#75'
+            },
+            {
+                shrine:'Our Lady of the Pillar',
+                country:'Spain',
+                link: 'details.html#76'
+            },
+            {
+                shrine:'Santiago de Compostela',
+                country:'Spain',
+                link: 'details.html#77'
+            },
+            {
+                shrine:'Santo Domingo de Silos Monastery',
+                country:'Spain',
+                link: 'details.html#78'
+            },
+            {
+                shrine:'St. Teresa of Avila',
+                country:'Spain',
+                link: 'details.html#79'
+            },
+            {
+                shrine:'Our Lady of Einsiedeln',
+                country:'Switzerland',
+                link: 'details.html#80'
+            },
+            {
+                shrine:'Our Lady of the Rock',
+                country:'Switzerland',
+                link: 'details.html#81'
+            }
+
+        ];
+
+
+
+        function sortFunction(a, b) {
+            if(a.shrine < b.shrine)
+            return -1;
+            if(a.shrine > b.shrine)
+                return 1;
+            return 0;
+        }
+        m.sort(sortFunction);
+
+        var container = document.getElementById("shrineTable").getElementsByTagName("tbody")[0];
+
+        for(var i=0; m.length; i++){
+            var tr = document.createElement("tr");
+            var cityName = document.createElement('a');
+            cityName.href = m[i].link;
+            cityName.innerHTML = m[i].shrine;
+            var cityColumn = document.createElement('td');
+            cityColumn.appendChild(cityName);
+            var countryColumn = document.createElement('td');
+            countryColumn.innerHTML = m[i].country;
+            tr.appendChild(cityColumn);
+            tr.appendChild(countryColumn);
+            container.appendChild(tr);
+
+        };
+
+
+
+
+    </script>
+    <script>
+        $("#e1").select2({placeholder: "Search by destination or keyword"});
+        function myFunction() {
+            // Declare variables
+            var input, filter, table, tr, td, i, k;
+            if(document.getElementsByClassName("select2-selection__choice").length > 0){
+                table = document.getElementById("shrineTable");
+                tr = table.getElementsByTagName("tr");
+                for (i = 1; i < tr.length; i++){
+                    tr[i].style.display = "none";
+                }
+                for(k = 0; k < document.getElementsByClassName("select2-selection__choice").length; k++){
+                    input = document.getElementsByClassName("select2-selection__choice")[k].title;
+                    filter = input.toUpperCase();
+                    table = document.getElementById("shrineTable");
+                    tr = table.getElementsByTagName("tr");
+
+
+                    // Loop through all table rows, and hide those who don't match the search query
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[1];
+                        if (td) {
+                            if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].style.display = "table-row";
+                            }
+                        }
+                    }
+
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[0];
+                        if (td) {
+                            if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].style.display = "table-row";
+                            }
+                        }
+                    }
+                }
+            }
+            else {
+                table = document.getElementById("shrineTable");
+                tr = table.getElementsByTagName("tr");
+                for (i = 0; i < tr.length; i++){
+                    tr[i].style.display = "table-row";
+                }
+            }
+            toZebra();
+        }
+        function toZebra() {
+            var j=0;
+            var table = document.getElementById('shrineTable');
+            var table_body = table.getElementsByTagName('tbody');
+
+            for (var h = 0; h < table_body.length; h++) {
+                var table_tr = table_body[h].getElementsByTagName('tr');
+                for (var i = 0; i < table_tr.length; i++) {
+                    var tr_style = getComputedStyle(table_tr[i]);
+                    var displayType = tr_style.display;
+                    if(displayType == "table-row"){
+                        j++;
+                        if (j%2) {
+                            table_tr[i].style.backgroundColor = "#fff";
+                        } else {
+                            table_tr[i].style.backgroundColor = "#eee";
+                        }
+                    }
+
+                }
+            }
+        }
+    </script>
+
 </div>
 <footer class="full-width">
     <div class="b-footer">
@@ -762,7 +1115,6 @@
         </div>
     </div>
 </footer>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://www.206tours.com/assets/js/global_new.js"></script><script>
     $(document).foundation();
     // Slick slider initialize
